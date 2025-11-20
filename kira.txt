@@ -4,3 +4,9 @@ kubectl get pods
 kubectl expose deployment niginx-deploy --type=NodePort --port=80
 minikube service niginx-deploy
 kubectl scale deployment niginx-deploy --replicas=5
+
+docker pull jasonrivers/nagios
+docker run --name nagios \
+ -p 8080:80 \
+ -d jasonrivers/nagios
+Host Detail
