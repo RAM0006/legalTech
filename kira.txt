@@ -10,3 +10,7 @@ docker run --name nagios \
  -p 8080:80 \
  -d jasonrivers/nagios
 Host Detail
+
+
+ngrok config add-authtoken 33xG2DFaFabmfUTzFMVSY6xIxq1_5ezrZtD2nCWjhByH8oDmX
+ngrok http 8080
