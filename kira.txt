@@ -1,7 +1,7 @@
 kubectl create deployment niginx-deploy --image=nginx
 kubectl get deployment
 kubectl get pods
-kubectl expose deployment niginx-deploy --type=NodePort --port=80
+kubectl expose deployment niginx-deploy --type=NodePort --port=80 
 minikube service niginx-deploy
 kubectl scale deployment niginx-deploy --replicas=5
 
@@ -15,3 +15,8 @@ Host Detail
 ngrok config add-authtoken Three3xG2DFaFabmfUTzFMVSY6xIxq1_5ezrZtD2nCWjhByH8oDmX
 ngrok http 8080
 
+
+//aws
+docker build -t myapp .
+docker run -p 3000:3000 myapp
+docker run -d -p 80:3000 myapp
